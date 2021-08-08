@@ -1,25 +1,13 @@
 import { Component } from 'react'
-import { connect } from 'react-redux'
-import { View, Button, Text } from '@tarojs/components'
-
-import { add, minus, asyncAdd } from '../../actions/counter'
-
+import { View, Button} from '@tarojs/components'
 import './index.less'
+import Header from './header'
+import TabBar from "../common/tabBar"
+import HomeSwiper from "./homeSwiper"
+import IndexIcon from "./indexIcon"
+import HomeMidCon from "./homeMidCon"
+import HomeHotList from "./homeHotList";
 
-
-@connect(({ counter }) => ({
-  counter
-}), (dispatch) => ({
-  add () {
-    dispatch(add())
-  },
-  dec () {
-    dispatch(minus())
-  },
-  asyncAdd () {
-    dispatch(asyncAdd())
-  }
-}))
 class Index extends Component {
   componentWillReceiveProps (nextProps) {
     console.log(this.props, nextProps)
@@ -34,15 +22,15 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
-        <Button className='dec_btn' onClick={this.props.dec}>-</Button>
-        <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
-        <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World</Text></View>
+        <Header></Header>
+        <HomeSwiper></HomeSwiper>
+        <IndexIcon></IndexIcon>
+        <HomeMidCon></HomeMidCon>
+        <HomeHotList></HomeHotList>
+        <TabBar></TabBar>
       </View>
     )
   }
 }
 
 export default Index
-

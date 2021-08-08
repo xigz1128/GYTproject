@@ -1,0 +1,74 @@
+@import '../../constants/imageUrl.less';
+@HOMEHOTBG:'homeHotBg.png';
+//今日热点模块标题
+.home-hot-title-content{
+  width: 100%;
+  background-image: url("@{IMAGEURL}@{HOMEHOTBG}");
+  background-size: 60% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 2rem;
+  margin-top: 1rem;
+  justify-content:center;
+  position: relative;
+  margin-bottom: 1rem;
+}
+//今日热点标题文字
+.home-hot-title{
+  letter-spacing: 0.3rem;
+  margin-left: 0.9rem;
+  color: #333333;
+  font-family: '方正小标宋简体', sans-serif;
+}
+
+//更多文字和按钮
+.home-hot-more{
+  display: inline-block;
+  position: absolute;
+  right: 0.8rem;
+  cursor: pointer;
+  color: #99999f;
+}
+//更多文字
+.home-hot-more-title{
+  font-size: 0.8rem;
+}
+
+//今日热点列表内容
+.home-hot-contentList{
+  border-top: 1px solid #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+/*热点无数据时显示*/
+.hot-spot-list-none{
+  text-align: center;
+  justify-content: center;
+  margin-top: 4rem;
+}
+.hot-spot-list-none-text{
+  font-size: 2rem;
+  color: #7F7F7F;
+}
+
+.home-hot-least-title{
+  margin-bottom: 1rem;
+}
+.home-hot-least-title-text{
+  font-size: 0.7rem;
+  color: #666;
+  display: table;
+  width: auto;
+  white-space: nowrap;
+  border-spacing: 0.5rem 0;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+}
+.home-hot-least-title-text::before,.home-hot-least-title-text::after{
+  display: table-cell;
+  content: "";
+  width: 50%;
+  background: linear-gradient(#666, #666) repeat-x center;
+  background-size: 0.1rem 0.1rem;
+}
